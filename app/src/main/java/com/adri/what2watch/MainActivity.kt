@@ -19,29 +19,21 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             What2watchTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                    What2watchApp()
             }
         }
     }
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
+fun What2watchApp() {
+    Text("What2Watch")
 }
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun What2WatchAppPreview() {
     What2watchTheme {
-        Greeting("Android")
+        What2watchApp()
     }
 }
